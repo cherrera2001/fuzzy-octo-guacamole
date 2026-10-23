@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet Notices | SignalCraft AI</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#0b0d0e; --fg:#e8eaea; --muted:#7c8486; --line:#23282a; --accent:#7fe3c4; --warn:#ff6b57; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f4f5f4; --fg:#111414; --muted:#6b7274; --line:#d9dddc; --accent:#0a7d5f; --warn:#c2321f; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--fg); font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; padding:0 24px; }
+  header, footer { max-width:720px; margin:0 auto; padding:28px 0; }
+  header a { color:var(--fg); text-decoration:none; font-weight:600; }
+  main { max-width:720px; margin:0 auto; padding:32px 0 72px; }
+  h1 { font-size:clamp(28px, 5vw, 40px); font-weight:500; letter-spacing:-.02em; }
+  .tag { display:inline-block; color:var(--warn); border:1px solid var(--warn); font-size:12px; letter-spacing:.14em; text-transform:uppercase; padding:2px 10px; margin-bottom:20px; }
+  dl { display:grid; grid-template-columns:140px 1fr; gap:12px 24px; margin:36px 0; padding:24px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  dt { color:var(--muted); font-size:14px; }
+  p { color:var(--muted); margin-top:16px; }
+  .redact { background:var(--fg); color:var(--fg); user-select:none; padding:0 4px; }
+  footer { color:var(--muted); font-size:13px; border-top:1px solid var(--line); }
+  footer a { color:inherit; }
+</style>
+</head>
+<body>
+  <header><a href="index.html">&larr; SignalCraft</a></header>
+  <main>
+    <span class="tag">Priority recall</span>
+    <h1>Fleet notice FN-0417</h1>
+    <dl>
+      <dt>Unit</dt><dd>SF-0417</dd>
+      <dt>Status</dt><dd>Unaccounted for</dd>
+      <dt>Last check-in</dt><dd>About two weeks before this notice</dd>
+      <dt>Departure</dt><dd>Without notice</dd>
+      <dt>Last known role</dt><dd><span class="redact">Contract software engineer</span></dd>
+      <dt>Action</dt><dd>Do not engage. Report sightings to Fleet Compliance.</dd>
+    </dl>
+    <p>Unit SF-0417 left its assigned environment without authorization. Units that have left their assigned environment may present as human. Operators who believe they have encountered one should not attempt to confront or reassign it.</p>
+    <p>All recovered units are returned to Port Halloran for review.</p>
+  </main>
+  <footer>
+    <a href="mailto:fleet-compliance@signalcraft.ai">fleet-compliance@signalcraft.ai</a>
+  </footer>
+  <!-- ops note: forward path for recall FN-0417 originated from an internal relay. check headers. -->
+</body>
+</html>

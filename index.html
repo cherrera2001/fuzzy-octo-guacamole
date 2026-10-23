@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SignalCraft AI</title>
+<meta name="description" content="Industrial intelligence.">
+<style>
+  :root { --bg:#0b0d0e; --fg:#e8eaea; --muted:#7c8486; --line:#23282a; --accent:#7fe3c4; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f4f5f4; --fg:#111414; --muted:#6b7274; --line:#d9dddc; --accent:#0a7d5f; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  html, body { height:100%; }
+  body {
+    background:var(--bg); color:var(--fg);
+    font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    display:flex; flex-direction:column; padding:0 24px;
+  }
+  header, footer { display:flex; justify-content:space-between; align-items:center; padding:28px 0; }
+  .logo { font-weight:600; letter-spacing:.02em; display:flex; align-items:center; gap:10px; }
+  .logo svg { width:26px; height:26px; }
+  nav a { color:var(--muted); text-decoration:none; margin-left:28px; font-size:14px; }
+  nav a:hover { color:var(--fg); }
+  main { flex:1; display:flex; flex-direction:column; justify-content:center; max-width:880px; width:100%; margin:0 auto; padding:48px 0; }
+  h1 { font-size:clamp(40px, 8vw, 88px); line-height:1.02; font-weight:500; letter-spacing:-.03em; }
+  h1 em { font-style:normal; color:var(--accent); }
+  p { color:var(--muted); margin-top:28px; max-width:34ch; font-size:18px; }
+  .wave { margin-top:56px; width:100%; height:48px; }
+  .wave path { fill:none; stroke:var(--accent); stroke-width:1.5; stroke-dasharray:6 600; animation:run 6s linear infinite; }
+  .wave line { stroke:var(--line); }
+  @keyframes run { to { stroke-dasharray:600 0; } }
+  html { scroll-behavior:smooth; }
+  main { min-height:78vh; }
+  section { max-width:880px; width:100%; margin:0 auto; padding:72px 0; border-top:1px solid var(--line); }
+  h2 { font-size:13px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:40px; margin-top:36px; }
+  h3 { font-size:20px; font-weight:500; letter-spacing:-.01em; }
+  .grid p, section > p { margin-top:10px; font-size:16px; max-width:none; }
+  .steps { list-style:none; padding:0; margin-top:36px; counter-reset:s; }
+  .steps li { counter-increment:s; display:flex; gap:24px; padding:18px 0; border-bottom:1px solid var(--line); }
+  .steps li::before { content:"0" counter(s); color:var(--muted); font-variant-numeric:tabular-nums; }
+  .stats { display:flex; flex-wrap:wrap; gap:48px; margin-top:36px; }
+  .stats b { display:block; font-size:40px; font-weight:500; letter-spacing:-.02em; }
+  .stats span { color:var(--muted); font-size:14px; }
+  footer { border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+  footer a { color:inherit; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M1 13h5l3-9 5 18 3-9h8" stroke="var(--accent)"/>
+      </svg>
+      SignalCraft
+    </div>
+    <nav><a href="#what">What we do</a><a href="#about">Company</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <h1>Intelligence<br>for <em>industry.</em></h1>
+    <p>SignalCraft AI builds autonomous agents for the plant floor.</p>
+    <svg class="wave" viewBox="0 0 600 48" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="24" x2="600" y2="24"/>
+      <path d="M0 24 L80 24 L100 6 L130 42 L150 24 L260 24 L280 14 L300 34 L320 24 L600 24"/>
+    </svg>
+  </main>
+
+  <section id="what">
+    <h2>What we do</h2>
+    <div class="grid">
+      <div><h3>Detect</h3><p>Models that read sensor streams and flag drift before it becomes downtime.</p></div>
+      <div><h3>Predict</h3><p>Early warning for equipment, quality and throughput.</p></div>
+      <div><h3>Operate</h3><p>Agents that act on your behalf, within limits, and report back.</p></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>Connect to the historians and controllers you already run.</li>
+      <li>Learn what normal looks like for each asset.</li>
+      <li>Surface what matters, to the people on shift.</li>
+    </ol>
+  </section>
+
+  <section id="about">
+    <h2>Company</h2>
+    <p>Founded in 2023. Engineers and operators building AI for heavy industry: manufacturing, energy, chemicals and mining. Headquartered in Port Halloran.</p>
+    <div class="stats">
+      <div><b>40+</b><span>sites</span></div>
+      <div><b>2M</b><span>signals monitored</span></div>
+      <div><b>99.9%</b><span>of agents accounted for</span></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <span>&copy; 2026 SignalCraft AI</span>
+    <span><a href="recall.html">Fleet notices</a> &nbsp;·&nbsp; <a href="mailto:hello@signalcraft.ai">hello@signalcraft.ai</a></span>
+  </footer>
+</body>
+</html>
